@@ -6,3 +6,78 @@
   margin: 0;
   padding: 0;
 }
+
+/* Code for responsive design */
+@media screen and (max-width: 1660px) {
+  html {
+    font-size: 107%;
+  }
+}
+@media screen and (max-width: 1587px) {
+  html {
+    font-size: 96%;
+  }
+}
+@media screen and (max-width: 1424px) {
+  html {
+    font-size: 90%;
+  }
+}
+@media screen and (max-width: 1335px) {
+  html {
+    font-size: 84%;
+  }
+}
+@media screen and (max-width: 1246px) {
+  html {
+    font-size: 78%;
+  }
+}
+@media screen and (max-width: 1200px) {
+  html {
+    font-size: 71%;
+  }
+}
+@media screen and (max-width: 1025px) {
+  html {
+    font-size: 109%;
+  }
+}
+@media screen and (max-width: 920px) {
+  html {
+    font-size: 100%;
+  }
+}
+
+@media screen and (max-width: 843px) {
+  html {
+    font-size: 94%;
+  }
+}
+@media screen and (max-width: 793px) {
+  html {
+    font-size: 88%;
+  }
+}
+
+@media screen and (max-width: 742px) {
+  html {
+    font-size: 83%;
+  }
+}
+@media screen and (max-width: 550px) {
+  html {
+    font-size: 60%;
+  }
+}
+@media screen and (max-width: 432px) {
+  html {
+    font-size: 46%;
+  }
+}
+
+@media screen and (max-width: 376px) {
+  html {
+    font-size: 40%;
+  }
+}

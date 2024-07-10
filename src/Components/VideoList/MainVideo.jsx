@@ -15,13 +15,11 @@ const MainVideo = ({
   comments,
 }) => {
   return (
-    <div className='w-4/6'>
-      <div>
+    <div className='basis-4/6'>
+      <div className='w-full h-96 lg:h-1/5'>
         <iframe
-          width='914'
-          height='514'
+          className='w-full h-full'
           src={`https://www.youtube.com/embed/${videoId}?autoplay=1`}
-          title='COSTA RICA IN 4K 60fps HDR (ULTRA HD)'
           frameBorder='0'
           allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'
           referrerPolicy='strict-origin-when-cross-origin'

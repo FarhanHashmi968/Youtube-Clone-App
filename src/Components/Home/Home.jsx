@@ -1,6 +1,5 @@
 import Sidebar from '../Sidebar/Sidebar'
 import Feed from '../Feed/Feed'
-import { useState } from 'react'
 
 const Home = ({ isSideBarOpen, category, setCategory }) => {
   return (

@@ -26,16 +26,16 @@ const Feed = ({ category }) => {
     try {
       const response = await axios.request(optionsForCategories)
       console.log('Category data fetched:', response.data.data)
-      data === null
-        ? setData(response.data.data)
-        : setData([...data, ...response.data.data])
-      console.log(data)
+      setData((prevData) =>
+        prevData ? [...prevData, ...response.data.data] : response.data.data
+      )
     } catch (error) {
       console.error('Error fetching category videos:', error)
     }
   }
 
   useEffect(() => {
+    setData(null)
     fetchingCategoryVideos()
   }, [category])
 
@@ -48,13 +48,13 @@ const Feed = ({ category }) => {
   }
 
   return (
-    <div className='flex border-2 w-full flex-wrap p-5 bg-gray-50'>
+    <div className='flex border-2 w-full flex-wrap p-5 bg-gray-50 gap-8 justify-center'>
       {data.map(
         (item) =>
           item.type === 'video' && (
             <Link to={`/video/${item.videoId}`} key={item.videoId}>
               <div
-                className='flex flex-col w-72 cursor-pointer my-6 mx-4'
+                className='flex flex-col w-72 cursor-pointer'
                 key={item.videoId}
               >
                 <img
@@ -79,10 +79,7 @@ const Feed = ({ category }) => {
       <div className='w-full'>
         <button
           className='rounded-xl border-2 p-1 w-28 shadow-md bg-red-600 text-white h-12'
-          onClick={() => {
-            setPage(page + 1)
-            console.log(page)
-          }}
+          onClick={() => setPage(page + 1)}
         >
           Add More
         </button>
@@ -90,4 +87,5 @@ const Feed = ({ category }) => {
     </div>
   )
 }
+
 export default Feed
